@@ -9,7 +9,7 @@
     "url": "https://github.com/shinGangan/renovate-config-hono.git"
   },
   "scripts": {
-    "test": "renovate-config-validator validate ./default.json"
+    "test": "renovate-config-validator ./default.json"
   },
   "devDependencies": {
     "renovate": "latest"
