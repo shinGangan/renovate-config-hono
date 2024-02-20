@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    # Pull requestがrenovate[bot]によるものであれば、テストをスキップする
+    if: github.actor != 'renovate[bot]'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 2
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: 🤖 Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🧪 Test validation
+        run: npm test

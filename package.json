@@ -1,0 +1,17 @@
+{
+  "name": "@shinGangan/renovate-config-hono",
+  "version": "0.1.0",
+  "description": "Hono presets for Renovate",
+  "author": "shinGangan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinGangan/renovate-config-hono.git"
+  },
+  "scripts": {
+    "test": "renovate-config-validator ./default.json"
+  },
+  "devDependencies": {
+    "renovate": "latest"
+  }
+}
