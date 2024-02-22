@@ -1,0 +1,34 @@
+name: Edit Pull Request
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  add-labels:
+    uses: shinGangan/.github/.github/workflows/labeler.yml@main
+    if: ${{ toJson(github.event.pull_request.labels) == '[]' }}
+    permissions:
+      contents: read
+      pull-requests: write
+    with:
+      config-path: .github/labeler.yml
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+  assign-author-and-set-milestone:
+    uses: shinGangan/.github/.github/workflows/pull_request.yml@main
+    permissions:
+      contents: read
+      repository-projects: read
+      pull-requests: write
+    with:
+      number: ${{ github.event.pull_request.number }}
+      assignee: ${{ github.event.pull_request.user.login }}
+      title: ${{ github.event.pull_request.title }}
+      # tentative
+      milestone: "v0.1.0"
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      repo: ${{ github.repository }}

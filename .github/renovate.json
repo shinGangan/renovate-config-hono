@@ -3,5 +3,7 @@
   "extends": [
     "github>shinGangan/renovate-config-hono",
     "github>shinGangan/renovate-config"
-  ]
+  ],
+  "labels": ["🤖 renovate"],
+  "reviewers": ["shinGangan"]
 }
