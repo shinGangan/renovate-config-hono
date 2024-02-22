@@ -1,0 +1,16 @@
+"🏠 chore":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**/*"
+          - ".vscode/*"
+          - "playground/**/*"
+
+"📝 documentation":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "README.md"
+
+"🚀 enhancement":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "default.json"
