@@ -5,6 +5,11 @@
       "groupSlug": "hono",
       "matchPackageNames": ["hono", "honox"],
       "matchPackagePrefixes": ["@hono"]
+    },
+    {
+      "groupName": "Hono Middleware",
+      "groupSlug": "hono-middleware",
+      "matchSourceUrls": ["https://github.com/honojs/middleware"]
     }
   ]
 }
