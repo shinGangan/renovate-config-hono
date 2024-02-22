@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "github>shinGangan/renovate-config-hono//development/base",
+    "monorepo:babel"
+  ]
+}
