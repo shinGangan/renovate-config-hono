@@ -9,7 +9,7 @@ jobs:
   test:
     # Pull requestがrenovate[bot]によるものであれば、テストをスキップする
     if: github.actor != 'renovate[bot]'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     timeout-minutes: 2
     strategy:
       matrix:
