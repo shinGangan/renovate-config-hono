@@ -9,9 +9,12 @@
     "url": "https://github.com/shinGangan/renovate-config-hono.git"
   },
   "scripts": {
-    "test": "renovate-config-validator ./default.json"
+    "test": "run-s -c test:*",
+    "test:default": "renovate-config-validator default.json",
+    "test:develop": "renovate-config-validator development/*.json"
   },
   "devDependencies": {
+    "npm-run-all2": "^6.1.2",
     "renovate": "latest"
   }
 }
